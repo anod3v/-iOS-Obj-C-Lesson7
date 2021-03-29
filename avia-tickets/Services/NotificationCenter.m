@@ -1,5 +1,5 @@
 //
-//  NotificationsCenter.m
+//  NotificationCenter.m
 //  avia-tickets
 //
 //  Created by Andrey on 29/03/2021.
@@ -8,6 +8,7 @@
 // NotificationCenter.m
 
 #import <UserNotifications/UserNotifications.h>
+#import "NotificationCenter.h"
 
 @interface NotificationCenter () <UNUserNotificationCenterDelegate>
 @end

@@ -1,5 +1,5 @@
 //
-//  NotificationsCenter.h
+//  NotificationCenter.h
 //  avia-tickets
 //
 //  Created by Andrey on 29/03/2021.
