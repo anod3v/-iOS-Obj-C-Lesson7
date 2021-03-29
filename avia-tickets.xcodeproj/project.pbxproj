@@ -33,6 +33,7 @@
 		12BABEB625F23D0B00DA8D5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12BABEB425F23D0B00DA8D5A /* LaunchScreen.storyboard */; };
 		12BABEB925F23D0B00DA8D5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BABEB825F23D0B00DA8D5A /* main.m */; };
 		43061670B2A6100B3A666D38 /* Pods_avia_tickets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DFCDDCBD66BEF93176C4C80 /* Pods_avia_tickets.framework */; };
+		55F008942611F6B600648D86 /* NotificationsCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F008932611F6B600648D86 /* NotificationsCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,8 @@
 		12BABEB825F23D0B00DA8D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14502EF8FA8D68BB6A1FE360 /* Pods-avia-tickets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avia-tickets.debug.xcconfig"; path = "Target Support Files/Pods-avia-tickets/Pods-avia-tickets.debug.xcconfig"; sourceTree = "<group>"; };
 		2DFCDDCBD66BEF93176C4C80 /* Pods_avia_tickets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avia_tickets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F008922611F67900648D86 /* NotificationsCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationsCenter.h; sourceTree = "<group>"; };
+		55F008932611F6B600648D86 /* NotificationsCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationsCenter.m; sourceTree = "<group>"; };
 		8575E0BC57FD814ADA21A141 /* Pods-avia-tickets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avia-tickets.release.xcconfig"; path = "Target Support Files/Pods-avia-tickets/Pods-avia-tickets.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +166,8 @@
 				1283CB9C25F695F10029767A /* APIManager.m */,
 				120E155125FBE6D800AED786 /* LocationManager.h */,
 				120E155225FBE6D800AED786 /* LocationManager.m */,
+				55F008922611F67900648D86 /* NotificationsCenter.h */,
+				55F008932611F6B600648D86 /* NotificationsCenter.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				1262FFF7260517F40048741A /* FavoriteTicket+CoreDataProperties.m in Sources */,
 				120E155325FBE6D800AED786 /* LocationManager.m in Sources */,
 				12694AB225F25DFA006BBC1F /* Airport.m in Sources */,
+				55F008942611F6B600648D86 /* NotificationsCenter.m in Sources */,
 				12BABEA825F23D0900DA8D5A /* AppDelegate.m in Sources */,
 				120E155925FBE9BF00AED786 /* MapViewController.m in Sources */,
 				12A708572608C0B5007B7822 /* Ticket.m in Sources */,
