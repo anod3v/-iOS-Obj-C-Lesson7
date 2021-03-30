@@ -8,6 +8,8 @@
 #import "TicketsViewController.h"
 #import "TicketTableViewCell.h"
 #import "CoreDataManager.h"
+#import "NotificationService.h"
+#import "Ticket.h"
 
 #define TicketCellReuseIdentifier @"TicketCellIdentifier"
 
@@ -128,7 +130,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.isFavorites) return;
+//    if (self.isFavorites) return;
+    if (self.isFavorites) {
+        Ticket *ticket = self.tickets[indexPath.row];
+        NSString *body = [NSString stringWithFormat:@"%@ (%@)", ticket.from, ticket.to];
+        Notification notification = NotificationMake(@"Напоминание о билете", body, ticket.departure);
+                [[NotificationService sharedInstance] sendNotification:notification];
+        
+        NSDate *notificationDate = [ticket.departure dateByAddingTimeInterval:-7*24*60*60];
+
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Успешно" message:[NSString stringWithFormat:@"Уведомление будет отправлено - %@", notificationDate] preferredStyle:(UIAlertControllerStyleAlert)];
+                UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Закрыть" style:UIAlertActionStyleCancel handler:nil];
+                [alertController addAction:cancelAction];
+                [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Действия с билетом" message:@"Что необходимо сделать с выбранным билетом?" preferredStyle:UIAlertControllerStyleActionSheet];
     

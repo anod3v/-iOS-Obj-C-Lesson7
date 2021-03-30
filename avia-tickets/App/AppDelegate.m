@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "MapViewController.h"
 #import "TabBarController.h"
+#import "NotificationService.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,8 @@
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
+    
+    [[NotificationService sharedInstance] registerService];
     
     return YES;
 }
