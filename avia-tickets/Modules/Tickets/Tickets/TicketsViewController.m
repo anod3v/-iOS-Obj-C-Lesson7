@@ -123,6 +123,23 @@
     return cell;
 }
 
+-(void) tableView:(UITableView *) tableView willDisplayCell:(UITableViewCell *) cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 0)
+    {
+        UIView *myView = [cell.contentView viewWithTag:(1)];
+         [UIView animateWithDuration:1.2
+                      delay:0
+                    options:UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut animations:^
+         {
+                   [myView setAlpha:0.0];
+         } completion:^(BOOL finished)
+         {
+                   [myView setAlpha:1.0];
+         }];
+    }
+}
+
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
